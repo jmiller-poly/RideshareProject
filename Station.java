@@ -15,7 +15,7 @@ public class Station {
         passengers.add(newPassenger);
     }
 
-    public void recieve(Passenger p) {
+    public void receive(Passenger p) {
         successes.add(p);
     }
 
