@@ -12,15 +12,5 @@ public class Road {
     }
 
     //methods//
-    //AddPassenger
 
-    //AddCar
-
-    //AddStation
-
-    //Move
-
-    //GetTotalIncome
-
-    //LoadUnload
 }
