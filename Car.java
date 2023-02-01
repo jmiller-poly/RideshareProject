@@ -40,7 +40,31 @@ public class Car {
 
     public void pickUp(Station station) {
         for(int i = passengers.size(); i < 3; i++) {
-
+            if(station.getPassCount() > 0) {
+                passengers.add(station.load());
+            }
         }
+    }
+
+    public void go(int lastStop) {
+        if(currentStation == 0) {
+            goingForward = true;
+        } else if(currentStation == lastStop) {
+            goingForward = false;
+        }
+        if(goingForward == true) {
+            currentStation ++;
+        } else {
+            currentStation --; 
+        }
+        revenue += passengers.size();
+    }
+
+    public String toString() {
+        return super.toString() + 
+        "Car" +
+        "[CurrentStop=" + currentStation +
+        ",Passengers=" + passengers +
+        ",CurrentRevenue" + revenue; 
     }
 }
