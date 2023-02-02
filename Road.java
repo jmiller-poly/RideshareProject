@@ -22,8 +22,8 @@ public class Road {
         stations.add(new Station());
     }
 
-    public void addCar(int firstStation, boolean goingForward) {
-        cars.add(new Car(firstStation, goingForward));
+    public void addCar(int firstStation, int lastDestination, boolean goingForward) {
+        cars.add(new Car(firstStation, lastDestination, goingForward));
     }
 
     public void addPassenger(int startingPoint, int finalDestination) {
@@ -32,6 +32,9 @@ public class Road {
 
     public void advance() {
         for(Car c : cars) {
+            if(c.getLastStop() == c.getCurrentStop()) {
+                ;
+            }
             c.move(stations);
         }
     }
