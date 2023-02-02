@@ -1,3 +1,9 @@
+/*
+ * Car.java
+ * @authors: Nick Gomez, James Miller
+ * @version: 2/2/23
+ */
+
 import java.util.*;
 
 public class Car {
@@ -6,13 +12,11 @@ public class Car {
     private boolean goingForward;
     private ArrayList<Passenger> passengers;
     private int revenue;
-    private int finalDestination;
 
     //constructors//
-    public Car(int firstStation, int lastDestination, boolean startForward) {
+    public Car(int firstStation, boolean startForward) {
         currentStation = firstStation;
         goingForward = startForward; 
-        finalDestination = lastDestination;
         passengers = new ArrayList<Passenger>();
     }
 
@@ -30,7 +34,7 @@ public class Car {
 
     //methods//
     
-    public void dropOff(Station station) {
+    private void dropOff(Station station) {
         for(int i = 0; i < 3; i++) {
             Passenger currPass = passengers.get(i);
             if(currPass.getDest() == currentStation) {
@@ -40,7 +44,7 @@ public class Car {
         }
     }
 
-    public void pickUp(Station station) {
+    private void pickUp(Station station) {
         for(int i = passengers.size(); i < 3; i++) {
             if(station.getPassCount() > 0) {
                 passengers.add(station.load());
@@ -48,10 +52,10 @@ public class Car {
         }
     }
 
-    public void go(int lastDestination) {
+    private void go(int lastStop) {
         if(currentStation == 0) {
             goingForward = true;
-        } else if(currentStation == lastDestination) {
+        } else if(currentStation == lastStop) {
             goingForward = false;
         }
         if(goingForward == true) {
@@ -60,6 +64,12 @@ public class Car {
             currentStation --; 
         }
         revenue += passengers.size();
+    }
+
+    public void move(ArrayList<Station> stations) {
+        go(stations.size());
+        dropOff(stations.get(currentStation));
+        pickUp(stations.get(currentStation));
     }
 
     public String toString() {
