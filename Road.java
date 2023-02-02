@@ -13,8 +13,8 @@ public class Road {
     
     //constructors//
     public Road() {
-        ArrayList<Station> stations = new ArrayList<Station>();
-        ArrayList<Car> cars = new ArrayList<Car>();
+        stations = new ArrayList<Station>();
+        cars = new ArrayList<Car>();
     }
 
     //methods//
@@ -31,12 +31,21 @@ public class Road {
     }
 
     public void advance() {
-        for(Car c : cars) {
+        for(int i = 0; i < cars.size(); i++) {
+            Car c = cars.get(i);
             if(c.getLastStop() == c.getCurrentStop()) {
-                ;
+                cars.remove(c);
+                i--;
             }
             c.move(stations);
         }
+    }
+
+    public String toString() {
+        return "Road[" +
+        "stations=" + stations+
+        ", cars=" + cars +
+        "]"; 
     }
 
 }
