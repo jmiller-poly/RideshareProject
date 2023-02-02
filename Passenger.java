@@ -15,10 +15,10 @@ public class Passenger {
 
     //methods//
     public int getDest() {
-        return destination; 
+        return destination;  //calls the destination variable
     }
 
-    public String toString() {
+    public String toString() { 
         return super.toString() +
         "Passenger" +
         "[dest=" + destination; 
