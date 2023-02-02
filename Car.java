@@ -8,11 +8,11 @@ import java.util.*;
 
 public class Car {
    //fields//
-   private int currentStation;
-   private boolean goingForward;
-   private ArrayList<Passenger> passengers;
-   private int revenue;
-   private int finalDestination;
+   private int currentStation; //current station
+   private boolean goingForward; //boolean variable that if true, moves the current station forward
+   private ArrayList<Passenger> passengers; //array list of passengers
+   private int revenue; //amount of money for driver made
+   private int finalDestination; //end of program when car reaches end
 
    //constructors//
    public Car(int firstStation, int lastDestination, boolean startForward) {
@@ -36,7 +36,7 @@ public class Car {
 
 
     //methods//
-    public int getLastStop() {
+    public int getLastStop() { //ends rideshare, does not restart when final destination is reached
         return finalDestination;
     }
 
