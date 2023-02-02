@@ -60,7 +60,7 @@ public class Car {
             goingForward = true;
         } else if(currentStation == lastStop) {
             goingForward = false;
-            currentStation = lastDestination;
+            currentStation = finalDestination;
         }
         if(goingForward == true) {
             currentStation ++;
