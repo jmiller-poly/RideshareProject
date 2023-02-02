@@ -39,6 +39,10 @@ public class Car {
     public int getLastStop() {
         return finalDestination;
     }
+
+    public int getCurrentStop() {
+        return currentStation;
+    }
     
     private void dropOff(Station station) {
         for(int i = 0; i < 3; i++) {
