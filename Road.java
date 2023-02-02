@@ -18,5 +18,22 @@ public class Road {
     }
 
     //methods//
+    public void addStation() {
+        stations.add(new Station());
+    }
+
+    public void addCar(int firstStation, boolean goingForward) {
+        cars.add(new Car(firstStation, goingForward));
+    }
+
+    public void addPassenger(int startingPoint, int finalDestination) {
+        stations.get(startingPoint).addPassenger(new Passenger(finalDestination));
+    }
+
+    public void advance() {
+        for(Car c : cars) {
+            c.move(stations);
+        }
+    }
 
 }
