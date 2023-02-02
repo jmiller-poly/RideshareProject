@@ -1,6 +1,7 @@
 /*
  * Passenger.java
  * @authors: James Miller, Nick Gomez
+ * @version: 2/2/23
  */
 
 public class Passenger {
