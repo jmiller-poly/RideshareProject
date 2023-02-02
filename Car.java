@@ -36,6 +36,9 @@ public class Car {
 
 
     //methods//
+    public int getLastStop() {
+        return finalDestination;
+    }
     
     private void dropOff(Station station) {
         for(int i = 0; i < 3; i++) {
@@ -55,13 +58,7 @@ public class Car {
         }
     }
 
-    private void go(int lastStop) {
-        if(currentStation == 0) {
-            goingForward = true;
-        } else if(currentStation == lastStop) {
-            goingForward = false;
-            currentStation = finalDestination;
-        }
+    private void go() {
         if(goingForward == true) {
             currentStation ++;
         } else {
@@ -71,7 +68,7 @@ public class Car {
     }
 
     public void move(ArrayList<Station> stations) {
-        go(stations.size());
+        go();
         dropOff(stations.get(currentStation));
         pickUp(stations.get(currentStation));
     }
