@@ -1,3 +1,8 @@
+/*
+ * Passenger.java
+ * @authors: James Miller, Nick Gomez
+ */
+
 public class Passenger {
     //fields//
     private int destination;
