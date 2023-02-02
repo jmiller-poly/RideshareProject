@@ -1,9 +1,3 @@
-/*
- * Car.java
- * @authors: Nick Gomez, James Miller
- * @version: 2/2/23
- */
-
 import java.util.*;
 
 public class Car {
@@ -12,11 +6,13 @@ public class Car {
     private boolean goingForward;
     private ArrayList<Passenger> passengers;
     private int revenue;
+    private int finalDestination;
 
     //constructors//
-    public Car(int firstStation, boolean startForward) {
+    public Car(int firstStation, int lastDestination, boolean startForward) {
         currentStation = firstStation;
         goingForward = startForward; 
+        finalDestination = lastDestination;
         passengers = new ArrayList<Passenger>();
     }
 
@@ -52,10 +48,10 @@ public class Car {
         }
     }
 
-    public void go(int lastStop) {
+    public void go(int lastDestination) {
         if(currentStation == 0) {
             goingForward = true;
-        } else if(currentStation == lastStop) {
+        } else if(currentStation == lastDestination) {
             goingForward = false;
         }
         if(goingForward == true) {
