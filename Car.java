@@ -40,11 +40,11 @@ public class Car {
         return finalDestination;
     }
 
-    public int getCurrentStop() {
+    public int getCurrentStop() { //calls current location
         return currentStation;
     }
     
-    private void dropOff(Station station) {
+    private void dropOff(Station station) { //removes a passenger
         for(int i = 0; i < 3; i++) {
             Passenger currPass = passengers.get(i);
             if(currPass.getDest() == currentStation) {
@@ -54,7 +54,7 @@ public class Car {
         }
     }
 
-    private void pickUp(Station station) {
+    private void pickUp(Station station) { //adds/picks up a passenger
         for(int i = passengers.size(); i < 3; i++) {
             if(station.getPassCount() > 0) {
                 passengers.add(station.load());
@@ -75,6 +75,10 @@ public class Car {
         go();
         dropOff(stations.get(currentStation));
         pickUp(stations.get(currentStation));
+    }
+
+    public int getRevenue() {
+        return revenue;
     }
 
     public String toString() {
