@@ -33,5 +33,8 @@ public class Station {
         return passengers.size();
     }
 
+    public String toString() {
+        return "";
+    }
     
 }
