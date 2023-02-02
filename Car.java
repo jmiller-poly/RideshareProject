@@ -7,30 +7,33 @@
 import java.util.*;
 
 public class Car {
-    //fields//
-    private int currentStation;
-    private boolean goingForward;
-    private ArrayList<Passenger> passengers;
-    private int revenue;
+   //fields//
+   private int currentStation;
+   private boolean goingForward;
+   private ArrayList<Passenger> passengers;
+   private int revenue;
+   private int finalDestination;
 
-    //constructors//
-    public Car(int firstStation, boolean startForward) {
-        currentStation = firstStation;
-        goingForward = startForward; 
-        passengers = new ArrayList<Passenger>();
-    }
+   //constructors//
+   public Car(int firstStation, int lastDestination, boolean startForward) {
+       currentStation = firstStation;
+       goingForward = startForward; 
+       finalDestination = lastDestination;
+       passengers = new ArrayList<Passenger>();
+   }
 
-    public Car(int firstStation) {
-        currentStation = firstStation;
-        goingForward = true;
-        passengers = new ArrayList<Passenger>();
-    }
+   public Car(int firstStation) {
+       currentStation = firstStation;
+       goingForward = true;
+       passengers = new ArrayList<Passenger>();
+   }
 
-    public Car() {
-        currentStation = 0;
-        goingForward = true;
-        passengers = new ArrayList<Passenger>();
-    }
+   public Car() {
+       currentStation = 0;
+       goingForward = true;
+       passengers = new ArrayList<Passenger>();
+   }
+
 
     //methods//
     
@@ -57,6 +60,7 @@ public class Car {
             goingForward = true;
         } else if(currentStation == lastStop) {
             goingForward = false;
+            currentStation = lastDestination;
         }
         if(goingForward == true) {
             currentStation ++;
