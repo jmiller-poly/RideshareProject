@@ -10,6 +10,7 @@ public class Road {
     //fields//
     ArrayList<Station> stations;
     ArrayList<Car> cars;
+    int totalRevenue;
     
     //constructors//
     public Road() {
@@ -34,6 +35,7 @@ public class Road {
         for(int i = 0; i < cars.size(); i++) {
             Car c = cars.get(i);
             if(c.getLastStop() == c.getCurrentStop()) {
+                totalRevenue += c.getRevenue();
                 cars.remove(c);
                 i--;
             }
