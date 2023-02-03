@@ -1,4 +1,18 @@
 /*
+ * NOTE TO CONSIDER:
+ * If we are going to have our car eventually disappear instead of running forever, 
+ * we need to make sure that we're not killing it with passengers in it, either it
+ * shouldn't pick up more passengers (remove the pickUp method), or it should keep 
+ * adjusting its finalDestination variable until it actually runs out of passengers.
+ * I'm happy with either, but I think preventing it from picking up passengers is 
+ * the better choice because otherwise it has the potential to run for a very long
+ * while.
+ */
+
+
+
+
+/*
  * Car.java
  * @authors: Nick Gomez, James Miller
  * @version: 2/2/23
