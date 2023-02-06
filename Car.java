@@ -95,9 +95,9 @@ public class Car {
     * @param stations
     */
     public void move(ArrayList<Station> stations) {
+        pickUp(stations.get(currentStation));
         go();
         dropOff(stations.get(currentStation));
-        pickUp(stations.get(currentStation));
     }
     
 
