@@ -36,8 +36,8 @@ public class Road {
      * @param lastDestination
      * @param goingForward
      */
-    public void addCar(int firstStation, int lastDestination, boolean goingForward) {
-        cars.add(new Car(firstStation, lastDestination, goingForward));
+    public void addCar(int firstStation, int lastDestination) {
+        cars.add(new Car(firstStation, lastDestination));
     }
 
     /**

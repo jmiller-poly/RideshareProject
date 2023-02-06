@@ -15,21 +15,16 @@ public class Car {
    private int finalDestination; //end of program when car reaches end
 
    //constructors//
-   public Car(int firstStation, int lastDestination, boolean startForward) {
+   public Car(int firstStation, int lastDestination) {
        currentStation = firstStation;
-       goingForward = startForward; 
+       goingForward = firstStation > lastDestination; 
        finalDestination = lastDestination;
        passengers = new ArrayList<Passenger>();
    }
 
    public Car(int firstStation) {
        currentStation = firstStation;
-       goingForward = true;
-       passengers = new ArrayList<Passenger>();
-   }
-
-   public Car() {
-       currentStation = 0;
+       finalDestination = currentStation + 1;
        goingForward = true;
        passengers = new ArrayList<Passenger>();
    }
