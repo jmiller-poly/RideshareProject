@@ -31,9 +31,9 @@ public class Station {
             passengers.add(p);
         }
     }
-
+    
     public Passenger load() {
-        return passengers.get(0);
+        return passengers.remove(0);
     }
 
     public int getPassCount() {
