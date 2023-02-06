@@ -8,19 +8,23 @@ import java.util.*;
 
 public class Road {
     //fields//
-    ArrayList<Station> stations;
-    ArrayList<Car> cars;
-    int totalRevenue;
+    private ArrayList<Station> stations;
+    private ArrayList<Car> cars;
+    private int totalRevenue;
+    private int stationNum; //The identifying number of the next station
     
     //constructors//
     public Road() {
         stations = new ArrayList<Station>();
         cars = new ArrayList<Car>();
+        totalRevenue = 0;
+        stationNum = 0;
     }
 
     //methods//
     public void addStation() {
-        stations.add(new Station());
+        stations.add(new Station(stationNum));
+        stationNum++;
     }
 
     public void addCar(int firstStation, int lastDestination, boolean goingForward) {
