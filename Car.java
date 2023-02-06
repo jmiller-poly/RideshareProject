@@ -35,16 +35,28 @@ public class Car {
    }
 
 
-    //methods//
-    public int getLastStop() { //ends rideshare, does not restart when final destination is reached
+    //methods
+    /**
+     * ends rideshare, does not restart when final destination is reached
+     * @return the final destination of the carr
+     * 
+     */
+    public int getLastStop() { 
         return finalDestination;
     }
-
-    public int getCurrentStop() { //calls current location
+    /**
+     * 
+     * @return current location
+     */
+    public int getCurrentStop() { 
         return currentStation;
     }
-    
-    private void dropOff(Station station) { //removes a passenger
+    /**
+     * Removes a passenger from array list after dropoff
+     * @param station 
+     *
+     */
+    private void dropOff(Station station) { 
         for(int i = 0; i < 3; i++) {
             Passenger currPass = passengers.get(i);
             if(currPass.getDest() == currentStation) {
@@ -54,14 +66,20 @@ public class Car {
         }
     }
 
-    private void pickUp(Station station) { //adds/picks up a passenger
+   /**
+    * adds to list/picks up a passenger
+    * @param station
+    */
+    private void pickUp(Station station) { 
         for(int i = passengers.size(); i < 3; i++) {
             if(station.getPassCount() > 0) {
                 passengers.add(station.load());
             }
         }
     }
-
+    /**
+     * if the car is going forward, add 1 to current location, if not, go back 1
+     */
     private void go() {
         if(goingForward == true) {
             currentStation ++;
@@ -71,6 +89,10 @@ public class Car {
         revenue += passengers.size();
     }
 
+   /**
+    * calls go, dropOff, pickUp methods
+    * @param stations
+    */
     public void move(ArrayList<Station> stations) {
         go();
         dropOff(stations.get(currentStation));
@@ -84,8 +106,13 @@ public class Car {
             }
         }
     }
+    
 
-    public int getRevenue() {
+    /**
+     * 
+     * @return the revenue of the car
+     */
+    public int getRevenue() { 
         return revenue;
     }
 
