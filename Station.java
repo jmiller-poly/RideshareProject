@@ -28,7 +28,7 @@ public class Station {
         if(p.getDest() == stationNum) {
             successes.add(p);
         } else {
-            passengers.add(p)
+            passengers.add(p);
         }
     }
 
