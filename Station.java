@@ -20,11 +20,19 @@ public class Station {
     }
 
     //methods//
+    /**
+     * adds new passenger
+     * @param newPassenger
+     */
     public void addPassenger(Passenger newPassenger) {
         passengers.add(newPassenger);
     }
 
-    public void receive(Passenger p) {
+    /**
+     * returns whether to drop off, either added to list of waiting, or sucessfully dropped off
+     * @param p
+     */
+    public void receive(Passenger p) { 
         if(p.getDest() == stationNum) {
             successes.add(p);
         } else {
@@ -32,11 +40,19 @@ public class Station {
         }
     }
 
-    public Passenger load() {
+    /**
+     * returns the first passenger in the array list
+     * @return
+     */
+    public Passenger load() { 
         return passengers.get(0);
     }
 
-    public int getPassCount() {
+    /**
+     * returns number of passengers in the array list
+     * @return
+     */
+    public int getPassCount() { 
         return passengers.size();
     }
 
