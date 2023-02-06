@@ -13,12 +13,16 @@ public class Passenger {
         destination = myDestination; 
     }
 
-    //methods//
+    //methods
+    /**
+     * 
+     * @return destination variable
+     */
     public int getDest() {
-        return destination;  //calls the destination variable
+        return destination;  
     }
 
-    public String toString() { //toString to fufil recquirement, returns value fo destination in a String format
+    public String toString() { 
         return super.toString() +
         "Passenger" +
         "[dest=" + destination; 
