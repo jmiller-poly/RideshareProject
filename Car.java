@@ -15,19 +15,20 @@ public class Car {
    private int finalDestination; //end of program when car reaches end
 
    //constructors//
-   public Car(int firstStation, int lastDestination) {
+    public Car(int firstStation, int lastDestination) {
        currentStation = firstStation;
+       System.out.println(currentStation);
        goingForward = firstStation > lastDestination; 
        finalDestination = lastDestination;
        passengers = new ArrayList<Passenger>();
-   }
+    }
 
-   public Car(int firstStation) {
+    public Car(int firstStation) {
        currentStation = firstStation;
        finalDestination = currentStation + 1;
        goingForward = true;
        passengers = new ArrayList<Passenger>();
-   }
+    }
 
 
     //methods
@@ -97,6 +98,7 @@ public class Car {
     public void move(ArrayList<Station> stations) {
         pickUp(stations.get(currentStation));
         go();
+        System.out.println(currentStation);
         dropOff(stations.get(currentStation));
     }
     
