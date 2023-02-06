@@ -80,7 +80,11 @@ public class Station {
     }
 
     public String toString() {
-        return "";
+        return super.toString() +
+        "Station" +
+        "[stationNum=" + stationNum +
+        ", passengers=" + passengers +
+        "]";
     }
     
 }
