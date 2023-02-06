@@ -56,8 +56,14 @@ public class Car {
 
     private void pickUp(Station station) { //adds/picks up a passenger
         for(int i = passengers.size(); i < 3; i++) {
-            if(station.getPassCount() > 0) {
-                passengers.add(station.load());
+            if(goingForward == true) {
+                if(station.hasForwardPassenger()) {
+                    ;
+                }
+            } else {
+                if(station.hasBackwardPassenger()) {
+                   ;
+                }
             }
         }
     }
@@ -74,15 +80,7 @@ public class Car {
     public void move(ArrayList<Station> stations) {
         go();
         dropOff(stations.get(currentStation));
-        if(goingForward == true) {
-            if(stations.get(currentStation).hasForwardPassenger()) {
-                pickUp(stations.get(currentStation));
-            }
-        } else {
-            if(stations.get(currentStation).hasBackwardPassenger()) {
-                pickUp(stations.get(currentStation));
-            }
-        }
+        pickUp(stations.get(currentStation));
     }
 
     public int getRevenue() {
