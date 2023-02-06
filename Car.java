@@ -74,11 +74,11 @@ public class Car {
         for(int i = passengers.size(); i < 3; i++) {
             if(goingForward == true) {
                 if(station.hasForwardPassenger()) {
-                    ;
+                    passengers.add(station.load(goingForward));
                 }
             } else {
                 if(station.hasBackwardPassenger()) {
-                   ;
+                    passengers.add(station.load(goingForward));
                 }
             }
         }
