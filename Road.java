@@ -21,20 +21,37 @@ public class Road {
         stationNum = 0;
     }
 
-    //methods//
+    /**
+     * adds a new station on the route
+     */
+    //methods// 
     public void addStation() {
         stations.add(new Station(stationNum));
         stationNum++;
     }
 
+    /**
+     * adds a car
+     * @param firstStation
+     * @param lastDestination
+     * @param goingForward
+     */
     public void addCar(int firstStation, int lastDestination, boolean goingForward) {
         cars.add(new Car(firstStation, lastDestination, goingForward));
     }
 
+    /**
+     * adds a passenger
+     * @param startingPoint
+     * @param finalDestination
+     */
     public void addPassenger(int startingPoint, int finalDestination) {
         stations.get(startingPoint).addPassenger(new Passenger(finalDestination));
     }
 
+    /**
+     * calls the selected car to "move" stations
+     */
     public void advance() {
         for(int i = 0; i < cars.size(); i++) {
             Car c = cars.get(i);
