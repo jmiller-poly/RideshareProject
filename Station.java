@@ -40,12 +40,35 @@ public class Station {
         }
     }
 
+    public boolean hasForwardPassenger() {
+        for(int i = 0; i < passengers.size(); i++) {
+            if(passengers.get(i).getDest() > stationNum) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean hasBackwardPassenger() {
+        for(int i = 0; i < passengers.size(); i++) {
+            if(passengers.get(i).getDest() < stationNum) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     /**
      * returns the first passenger in the array list
      * @return
      */
-    public Passenger load() { 
-        return passengers.remove(0);
+    public Passenger load(boolean goingForward) {
+        for(int i = 0; i < passengers.size(); i++) {
+            if ((passengers.get(i).getDest() > stationNum) == goingForward) {
+                return passengers.remove(i);
+            }
+        }
+        return null;
     }
 
     /**
