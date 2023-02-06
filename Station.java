@@ -8,12 +8,15 @@ import java.util.*;
 
 public class Station {
     //fields//
+    private int stationNum;
     private ArrayList<Passenger> passengers;
     private ArrayList<Passenger> successes; 
 
     //constructors//
-    public Station() {
-        passengers = new ArrayList<Passenger>(); 
+    public Station(int whatStation) {
+        stationNum = whatStation;
+        passengers = new ArrayList<Passenger>();
+        successes = new ArrayList<Passenger>(); 
     }
 
     //methods//
@@ -22,7 +25,11 @@ public class Station {
     }
 
     public void receive(Passenger p) {
-        successes.add(p);
+        if(p.getDest() == stationNum) {
+            successes.add(p);
+        } else {
+            passengers.add(p)
+        }
     }
 
     public Passenger load() {
