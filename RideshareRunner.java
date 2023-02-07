@@ -11,18 +11,19 @@ public class RideshareRunner {
             mainSt.addStation();
         }
         System.out.println(mainSt.toString() + "\n");
-        mainSt.addCar(0, 2);
+        mainSt.addCar(2, 4);
         mainSt.addCar(1, 4);
         System.out.println(mainSt.toString() + "\n");
         mainSt.addPassenger(1, 3);
         mainSt.addPassenger(4, 2);
         System.out.println(mainSt.toString() + "\n");
         mainSt.advance();
-        System.out.println(mainSt.toString());
-        System.out.println(mainSt.toString());
-        System.out.println(mainSt.toString());
-        System.out.println(mainSt.toString());
-        
+        System.out.println(mainSt.toString() + "\n");
+        mainSt.advance();
+        System.out.println(mainSt.toString() + "\n");
+        System.out.println(mainSt.toString() + "\n");
+        System.out.println(mainSt.toString() + "\n");
+        System.out.println(mainSt.toString() + "\n");        
 
     }
 }

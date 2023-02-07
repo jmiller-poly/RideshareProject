@@ -38,6 +38,7 @@ public class Road {
      */
     public void addCar(int firstStation, int lastDestination) {
         cars.add(new Car(firstStation, lastDestination));
+        System.out.println("New Car first station: " + cars.get(cars.size() - 1).getCurrentStop());
     }
 
     /**

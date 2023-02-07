@@ -17,7 +17,6 @@ public class Car {
    //constructors//
     public Car(int firstStation, int lastDestination) {
        currentStation = firstStation;
-       System.out.println(currentStation);
        goingForward = firstStation > lastDestination; 
        finalDestination = lastDestination;
        passengers = new ArrayList<Passenger>();
@@ -52,12 +51,14 @@ public class Car {
      * @param station 
      *
      */
-    private void dropOff(Station station) { 
-        for(int i = 0; i < 3; i++) {
-            Passenger currPass = passengers.get(i);
-            if(currPass.getDest() == currentStation) {
-                station.receive(passengers.get(i)); 
-                passengers.remove(i);
+    private void dropOff(Station station) {
+        if(passengers.size() > 0) {
+            for(int i = 0; i < passengers.size(); i++) {
+                Passenger currPass = passengers.get(i);
+                if(currPass.getDest() == currentStation) {
+                    station.receive(passengers.get(i)); 
+                    passengers.remove(i);
+                }
             }
         }
     }
@@ -98,7 +99,6 @@ public class Car {
     public void move(ArrayList<Station> stations) {
         pickUp(stations.get(currentStation));
         go();
-        System.out.println(currentStation);
         dropOff(stations.get(currentStation));
     }
     
