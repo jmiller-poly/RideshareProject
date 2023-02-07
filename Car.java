@@ -116,6 +116,7 @@ public class Car {
         "Car" +
         "[CurrentStop=" + currentStation +
         ",Passengers=" + passengers +
-        ",CurrentRevenue" + revenue; 
+        ",CurrentRevenue" + revenue
+        + "]"; 
     }
 }

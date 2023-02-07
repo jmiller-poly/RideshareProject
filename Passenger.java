@@ -25,6 +25,7 @@ public class Passenger {
     public String toString() { 
         return super.toString() +
         "Passenger" +
-        "[dest=" + destination; 
+        "[dest=" + destination +
+        "]"; 
     }
 }
