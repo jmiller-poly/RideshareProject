@@ -97,8 +97,8 @@ public class Car {
     * @param stations
     */
     public void move(ArrayList<Station> stations) {
-        pickUp(stations.get(currentStation));
         go();
+        pickUp(stations.get(currentStation));
         dropOff(stations.get(currentStation));
     }
     
@@ -116,7 +116,7 @@ public class Car {
         "Car" +
         "[CurrentStop=" + currentStation +
         ",Passengers=" + passengers +
-        ",CurrentRevenue" + revenue
+        ",CurrentRevenue=" + revenue
         + "]"; 
     }
 }

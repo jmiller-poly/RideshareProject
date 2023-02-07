@@ -12,7 +12,6 @@ public class RideshareRunner {
         }
         System.out.println(mainSt.toString() + "\n");
         mainSt.addCar(2, 4);
-        mainSt.addCar(1, 4);
         System.out.println(mainSt.toString() + "\n");
         mainSt.addPassenger(1, 3);
         mainSt.addPassenger(4, 2);
@@ -20,10 +19,27 @@ public class RideshareRunner {
         mainSt.advance();
         System.out.println(mainSt.toString() + "\n");
         mainSt.advance();
-        //System.out.println(mainSt.toString() + "\n");
-        //System.out.println(mainSt.toString() + "\n");
-        //System.out.println(mainSt.toString() + "\n");
         System.out.println(mainSt.toString() + "\n");        
+        mainSt.advance();
+        System.out.println(mainSt.toString() + "\n");        
+        mainSt.advance();
+        System.out.println(mainSt.toString() + "\n");        
+        mainSt.advance();
 
+        mainSt.addCar(0, 4);
+        System.out.println(mainSt.toString() + "\n");        
+        mainSt.advance();
+        System.out.println(mainSt.toString() + "\n");        
+        mainSt.advance();
+        System.out.println(mainSt.toString() + "\n");        
+        mainSt.advance();
+        System.out.println(mainSt.toString() + "\n");        
+        mainSt.advance();
+        System.out.println(mainSt.toString() + "\n");        
+        mainSt.advance();
+        System.out.println(mainSt.toString() + "\n");        
+        
+        
+        
     }
 }

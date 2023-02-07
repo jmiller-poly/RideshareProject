@@ -60,8 +60,9 @@ public class Road {
                 totalRevenue += c.getRevenue();
                 cars.remove(c);
                 i--;
-            }
+            } else {
             c.move(stations);
+            }
         }
     }
 
