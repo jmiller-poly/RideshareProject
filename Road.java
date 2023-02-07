@@ -70,6 +70,7 @@ public class Road {
         return "Road[" +
         "\nStations=[" + stations +
         "]\nCars=[" + cars +
+        "\nTotal Revenue=" + totalRevenue +
         "]]"; 
     }
 

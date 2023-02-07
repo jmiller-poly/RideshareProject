@@ -27,6 +27,7 @@ public class RideshareRunner {
         mainSt.advance();
 
         mainSt.addCar(0, 4);
+        mainSt.addCar(4, 0);
         System.out.println(mainSt.toString() + "\n");        
         mainSt.advance();
         System.out.println(mainSt.toString() + "\n");        
