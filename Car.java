@@ -112,7 +112,7 @@ public class Car {
     }
 
     public String toString() {
-        return super.toString() + 
+        return "\n\t" + super.toString() + 
         "Car" +
         "[CurrentStop=" + currentStation +
         ",Passengers=" + passengers +

@@ -67,9 +67,9 @@ public class Road {
 
     public String toString() {
         return "Road[" +
-        "stations=" + stations+
-        ", cars=" + cars +
-        "]"; 
+        "\nStations=[" + stations +
+        "]\nCars=[" + cars +
+        "]]"; 
     }
 
 }

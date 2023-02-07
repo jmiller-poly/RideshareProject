@@ -20,9 +20,9 @@ public class RideshareRunner {
         mainSt.advance();
         System.out.println(mainSt.toString() + "\n");
         mainSt.advance();
-        System.out.println(mainSt.toString() + "\n");
-        System.out.println(mainSt.toString() + "\n");
-        System.out.println(mainSt.toString() + "\n");
+        //System.out.println(mainSt.toString() + "\n");
+        //System.out.println(mainSt.toString() + "\n");
+        //System.out.println(mainSt.toString() + "\n");
         System.out.println(mainSt.toString() + "\n");        
 
     }

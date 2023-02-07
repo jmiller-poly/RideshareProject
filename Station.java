@@ -80,10 +80,10 @@ public class Station {
     }
 
     public String toString() {
-        return super.toString() +
+        return "\n\t" + super.toString() +
         "Station" +
-        "[stationNum=" + stationNum +
-        ", passengers=" + passengers +
+        "[StationNum=" + stationNum +
+        "\n\t\tPassengers=" + passengers +
         "]";
     }
     

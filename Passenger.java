@@ -23,9 +23,9 @@ public class Passenger {
     }
 
     public String toString() { 
-        return super.toString() +
+        return "\n\t\t\t" + super.toString() +
         "Passenger" +
-        "[dest=" + destination +
+        "[Dest=" + destination +
         "]"; 
     }
 }
