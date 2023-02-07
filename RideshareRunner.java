@@ -14,7 +14,9 @@ public class RideshareRunner {
         mainSt.addCar(2, 4);
         System.out.println(mainSt.toString() + "\n");
         mainSt.addPassenger(1, 3);
-        mainSt.addPassenger(4, 2);
+        mainSt.addPassenger(1, 3);
+        mainSt.addPassenger(4, 1);
+        mainSt.addPassenger(4, 1);
         System.out.println(mainSt.toString() + "\n");
         mainSt.advance();
         System.out.println(mainSt.toString() + "\n");
