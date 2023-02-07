@@ -17,7 +17,7 @@ public class Car {
    //constructors//
     public Car(int firstStation, int lastDestination) {
        currentStation = firstStation;
-       goingForward = firstStation > lastDestination; 
+       goingForward = firstStation < lastDestination; 
        finalDestination = lastDestination;
        passengers = new ArrayList<Passenger>();
     }
