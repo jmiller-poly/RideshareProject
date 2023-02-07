@@ -58,6 +58,7 @@ public class Car {
                 if(currPass.getDest() == currentStation) {
                     station.receive(passengers.get(i)); 
                     passengers.remove(i);
+                    i--;
                 }
             }
         }
