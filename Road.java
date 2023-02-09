@@ -65,10 +65,16 @@ public class Road {
         }
     }
 
+    /*
+     * returns totalRevenue
+     */
     public int getTotalRevenue() {
         return totalRevenue;
     }
 
+    /*
+     * return the number of passangers left after dropoffs
+     */
     public int getLeftOverPassengers() {
         int sum = 0;
         for(Station s : stations) {
@@ -77,6 +83,9 @@ public class Road {
         return sum;
     }
 
+    /*
+     * getter method to return if there are any cars on the road
+     */
     public int getCarsOnRoad() {
         return cars.size();
     }
