@@ -46,8 +46,8 @@ public class RideshareRunner {
             avgLOP += info[1];
         }
         System.out.println("\nAverage information for a road with " + stations + " stations, " + cars + " cars, and " + passengers + " passengers over " + loopNum + " loops: ");
-        System.out.println("Average total revenue: " + avgRev/loopNum);
-        System.out.println("Per car: " + avgRev/(loopNum*cars));
+        System.out.println("Average total revenue: $" + avgRev/loopNum);
+        System.out.println("Per car: $" + avgRev/(loopNum*cars));
         System.out.println("Average passengers who did not make it to their destination: " + avgLOP/loopNum);
     }
 }
