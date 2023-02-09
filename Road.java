@@ -38,7 +38,6 @@ public class Road {
      */
     public void addCar(int firstStation, int lastDestination) {
         cars.add(new Car(firstStation, lastDestination));
-        System.out.println("New Car first station: " + cars.get(cars.size() - 1).getCurrentStop());
     }
 
     /**
@@ -66,11 +65,27 @@ public class Road {
         }
     }
 
+    public int getTotalRevenue() {
+        return totalRevenue;
+    }
+
+    public int getLeftOverPassengers() {
+        int sum = 0;
+        for(Station s : stations) {
+            sum += s.getPassCount();
+        }
+        return sum;
+    }
+
+    public int getCarsOnRoad() {
+        return cars.size();
+    }
+
     public String toString() {
-        return "Road[" +
+        return "\nRoad[" +
         "\nStations=[" + stations +
         "]\nCars=[" + cars +
-        "\nTotal Revenue=" + totalRevenue +
+        "]\nTotal Revenue=" + totalRevenue +
         "]]"; 
     }
 
