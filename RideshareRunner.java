@@ -6,8 +6,10 @@
 
 public class RideshareRunner {
     public static void main(String[] args) {
-        loopRoad(31, 20, 50, 50, false, false);
-        loopRoad(31, 10, 30, 50, false, false);
+        loopRoad(31, 20, 50, 50000, false, false);
+        loopRoad(31, 20, 50, 50000, false, false);
+        loopRoad(31, 10, 30, 50000, false, false);
+        loopRoad(31, 10, 30, 50000, false, false);
     }
 
     public static int[] testRoad(int stations, int cars, int passengers, boolean testStatements, boolean lastCheck) {
