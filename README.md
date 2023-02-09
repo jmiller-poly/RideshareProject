@@ -13,3 +13,13 @@ total of 100000 runs of each scenario (accessible in the RideshareRunner file) w
 with 20 cars and 50 passengers, will make $11.80 per car ($236 total), and a road with 10 cars and 30 passengers
 will make about $11.40 per car (or $114 total). Both testers resulted in between nine and ten passengers not 
 making it to their destination. 
+
+HOW TO USE THE RUNNER:
+The runner has two methods in it, a testRoad function which, given conditions, runs a simulation of the road under
+those conditions. The second method, loopRoad, runs testRoad a given number of times, and prints out the average
+reuslts of these tests. In the main() function, you can set these tests to print out the toStrings, or not to. We
+have chosen to leave these parameters as 'false', otherwise the terminal would be flooded with the toStrings of over
+200000 simulations. However, if you wished to check that the logic of the objects was working as intended, setting 
+the first boolean to 'true' will print out the Road's toString once for each five times that advance() is called, 
+and setting the second boolean to 'true' will print out one last toString at the end of each simulation (to ensure
+that all cars and passengers are in their expected places by the end of the simulation).
