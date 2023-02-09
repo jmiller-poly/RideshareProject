@@ -40,6 +40,9 @@ public class Station {
         }
     }
 
+    /*
+     * boolen to determine if there is a passanger wanting to go to a forward destination
+     */
     public boolean hasForwardPassenger() {
         for(int i = 0; i < passengers.size(); i++) {
             if(passengers.get(i).getDest() > stationNum) {
@@ -49,6 +52,9 @@ public class Station {
         return false;
     }
 
+    /*
+     * boolean to determine if there is a passanger wanting to go to a backwards destination
+     */
     public boolean hasBackwardPassenger() {
         for(int i = 0; i < passengers.size(); i++) {
             if(passengers.get(i).getDest() < stationNum) {
