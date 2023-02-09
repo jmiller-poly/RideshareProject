@@ -6,8 +6,8 @@
 
 public class RideshareRunner {
     public static void main(String[] args) {
-        loopRoad(31, 20, 50, false, false);
-        loopRoad(31, 10, 30, false, false);
+        loopRoad(31, 20, 50, 50, false, false);
+        loopRoad(31, 10, 30, 50, false, false);
     }
 
     public static int[] testRoad(int stations, int cars, int passengers, boolean testStatements, boolean lastCheck) {
@@ -37,17 +37,17 @@ public class RideshareRunner {
         return info;
     }
 
-    public static void loopRoad(int stations, int cars, int passengers, boolean testStatements, boolean lastCheck) {
+    public static void loopRoad(int stations, int cars, int passengers, int loopNum, boolean testStatements, boolean lastCheck) {
         double avgRev = 0.0;
         double avgLOP = 0.0;
-        for(int i = 0; i < 50; i++) {
+        for(int i = 0; i < loopNum; i++) {
             int[] info = testRoad(stations, cars, passengers, testStatements, lastCheck);
             avgRev += info[0];
             avgLOP += info[1];
         }
-        System.out.println("\nAverage information for a road with " + stations + " stations, " + cars + " cars, and " + passengers + " passengers: ");
-        System.out.println("Average total revenue: " + avgRev/50);
-        System.out.println("Per car: " + avgRev/(50*cars));
-        System.out.println("Average passengers who did not make it to their destination: " + avgLOP/50);
+        System.out.println("\nAverage information for a road with " + stations + " stations, " + cars + " cars, and " + passengers + " passengers over " + loopNum + " loops: ");
+        System.out.println("Average total revenue: " + avgRev/loopNum);
+        System.out.println("Per car: " + avgRev/(loopNum*cars));
+        System.out.println("Average passengers who did not make it to their destination: " + avgLOP/loopNum);
     }
 }
