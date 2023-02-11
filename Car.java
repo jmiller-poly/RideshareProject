@@ -116,8 +116,8 @@ public class Car {
         return "\n\t" + super.toString() + 
         "Car" +
         "[CurrentStop=" + currentStation +
-        ",Passengers=" + passengers +
-        ",CurrentRevenue=" + revenue
+        "\n\t\tPassengers=" + passengers +
+        "\n\t\tCurrentRevenue=" + revenue
         + "]"; 
     }
 }
