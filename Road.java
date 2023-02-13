@@ -89,7 +89,9 @@ public class Road {
     public int getCarsOnRoad() {
         return cars.size();
     }
-
+    /**
+     * returns the toString of the car, informative
+     */
     public String toString() {
         return "\nRoad[" +
         "\nStations=[" + stations +

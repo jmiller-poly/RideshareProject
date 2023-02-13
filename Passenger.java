@@ -21,7 +21,9 @@ public class Passenger {
     public int getDest() {
         return destination;  
     }
-
+    /**
+     * returns the toString of the car, informative
+     */
     public String toString() { 
         return "\n\t\t\t" + super.toString() +
         "Passenger" +

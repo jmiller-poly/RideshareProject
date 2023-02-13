@@ -84,7 +84,9 @@ public class Station {
     public int getPassCount() { 
         return passengers.size();
     }
-
+    /**
+     * returns the toString of the car, informative
+     */
     public String toString() {
         return "\n\t" + super.toString() +
         "Station" +
